@@ -483,11 +483,11 @@ def main():
     page = st.sidebar.radio("Go to", ["Home", "Graphs", "Make a Prediction", "View Model Report"], index=0)
     st.session_state['page'] = page  # Store current page in session state
     
-    # Credits ad Help sidebar
+    # Credits & Help sidebar
     with st.sidebar:
         st.title("📜 Credits & Help")
         with st.expander("Credits"):
-            st.write("🎉 Developed with ❤️ by Akshat Goel, Anwita Padhi, Samanyu Pattanayak, Samruddh Om Bahanwal, Shruti:")
+            st.write("🎉 Developed with ❤️ by Akshat Goel, Anwita Padhi, Samanyu Pattanayak, Samruddh Om Bahanwal, Shruti Deepak:")
             st.write("### About Us")
             st.write("We are a passionate team dedicated to improving air quality awareness using data science. Our mission is to provide actionable insights through innovative tools like the AQI Predictor. 🌱")
             st.write("- Streamlit for the interactive UI 🌐")
@@ -502,6 +502,23 @@ def main():
             st.write("- Use 'Make a Prediction' to input pollutant values and predict AQI 🌡️")
             st.write("- View graphs or reports for detailed analysis 📊")
             st.write("For issues, contact support at sammyryuga@gmail.com ✉️")
+        with st.expander("Team"):
+            st.write("👥 Meet the Team:")
+            st.write("- **Akshat Goel**")
+            st.write("  - LinkedIn: [linkedin.com/in/akshat-goel](https://www.linkedin.com/in/akshat-goel-b13054323/)")
+            st.write("  - Instagram: [@akshatgoel_1105006](https://www.instagram.com/akshatgoel_1105006/)")
+            st.write("- **Anwita Padhi**")
+            st.write("  - LinkedIn: [linkedin.com/in/anwita-padhi](https://www.linkedin.com/in/anwita-padhi-187576321/)")
+            st.write("  - Instagram: [@anwitapadhi](https://www.instagram.com/anwitapadhi/)")
+            st.write("- **Samanyu Pattanayak**")
+            st.write("  - LinkedIn: [linkedin.com/in/samanyu-pattanayak](https://www.linkedin.com/in/samanyu-pattanayak-8757551a9/)")
+            st.write("  - Instagram: [@sammyryuga](https://www.instagram.com/sammyryuga/)")
+            st.write("- **Samruddh Om Bahanwal**")
+            st.write("  - LinkedIn: [linkedin.com/in/samruddh-om-bahanwal]( https://www.linkedin.com/in/samruddh-om-bahanwal-48a93a228?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app)")
+            st.write("  - Instagram: [@samruddh_om](https://www.instagram.com/samruddh_om/)")
+            st.write("- **Shruti Deepak**")
+            st.write("  - LinkedIn: [linkedin.com/in/shruti](https://www.linkedin.com/in/shruti-deepak-956820362/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app)")
+            st.write("  - Instagram: [@silent_silverkitty](https://instagram.com/silent_silverkitty)")
     
     # File uploader at the app level with a unique key
     uploaded_file = st.file_uploader("Choose a CSV file", type="csv", key="unique_file_uploader_2025")
