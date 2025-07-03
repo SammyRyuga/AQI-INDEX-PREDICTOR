@@ -37,7 +37,7 @@ To run the AQI Index Predictor locally, follow these steps:
 
 1. **Clone the Repository**
    ```bash
-   git clone https://github.com/your-username/aqi-predictor.git
+   git clone https://github.com/SammyRyuga/AQI-INDEX-PREDICTOR
    cd aqi-predictor
    ```
 
