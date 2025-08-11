@@ -41,9 +41,27 @@ st.markdown("""
         background-color: #3498db;
         color: white;
         border-radius: 5px;
+        transition: background-color 0.3s ease;
     }
     .stButton>button:hover {
         background-color: #2980b9;
+    }
+    .stNumberInput>input[type="number"]::-webkit-inner-spin-button,
+    .stNumberInput>input[type="number"]::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+    .stNumberInput>input[type="number"] {
+        -moz-appearance: textfield;
+        transition: background-color 0.3s ease;
+    }
+    .stNumberInput>input[type="number"]:hover {
+        background-color: #f0f0f0;
+    }
+    .stNumberInput>input[type="number"]:active,
+    .stNumberInput>input[type="number"]:focus {
+        background-color: white;
+        outline: none;
     }
     details > summary {
         transition: all 0.2s ease;
