@@ -2,6 +2,7 @@
 # Shebang
 
 # AQI Index Predictor using Linear Regression
+# Entrypoint for Streamlit Community Cloud: Run with `streamlit run app.py`
 
 import pandas as pd
 import numpy as np
