@@ -2,7 +2,12 @@
 
 An interactive, feature-rich Air Quality Index (AQI) predictor powered by Linear Regression and built with **Streamlit**. This tool analyzes air quality using pollutant data and provides real-time predictions with detailed visualizations and reports.
 
-> 📌 Developed with ❤️ by [Akshat Goel](https://www.linkedin.com/in/akshat-goel-b13054323/), [Anwita Padhi](https://www.linkedin.com/in/anwita-padhi-187576321/), [Samanyu Pattanayak](https://www.linkedin.com/in/samanyu-pattanayak-8757551a9/), [Samruddh Om Bahanwal](https://www.linkedin.com/in/samruddh-om-bahanwal-48a93a228?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app), and [Shruti Deepak](https://www.linkedin.com/in/shruti-deepak-956820362/).
+> 📌 Developed with ❤️ by
+>  [Akshat Goel](https://www.linkedin.com/in/akshat-goel-b13054323/),
+>  [Anwita Padhi](https://www.linkedin.com/in/anwita-padhi-187576321/),
+> [Samanyu Pattanayak](https://www.linkedin.com/in/samanyu-pattanayak-8757551a9/),
+> [Samruddh Om Bahanwal](https://www.linkedin.com/in/samruddh-om-bahanwal-48a93a228?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app), and
+> [Shruti Deepak](https://www.linkedin.com/in/shruti-deepak-956820362/).
 
 ---
 
