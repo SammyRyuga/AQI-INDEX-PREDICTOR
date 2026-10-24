@@ -32,7 +32,7 @@ An interactive, feature-rich Air Quality Index (AQI) predictor powered by Linear
 
 ## 📁 Project Structure
 
-- `Final_Model.py`: Main Python script with the Streamlit app and AQI Predictor class.
+- `Model_Final.py`: Streamlit app and AQI Predictor class used by Codespaces.
 - `requirements.txt`: List of dependencies required to run the project.
 - `LICENSE`: MIT License file for the project.
 - `README.md`: This file, providing an overview and setup instructions.
@@ -46,4 +46,24 @@ To run the AQI Index Predictor locally, follow these steps:
 1. **Clone the Repository**
    ```bash
    git clone https://github.com/SammyRyuga/AQI-INDEX-PREDICTOR
-   cd aqi-predictor
+   cd AQI-INDEX-PREDICTOR
+   ```
+
+2. **Install and launch the Codespaces entry point**
+   ```bash
+   python -m pip install -r requirements.txt
+   python -m streamlit run Model_Final.py
+   ```
+
+   Upload a CSV containing `City`, `AQI`, and pollutant columns such as `PM2.5`
+   and `PM10`. `Date` is optional; when provided, its range appears in the report.
+
+## Regression tests
+
+```bash
+python -m pip install -r requirements-dev.txt
+python -m pytest tests -q
+```
+
+These tests run the Streamlit app with synthetic CSV uploads and check prediction
+inputs, graphs, and reports with and without the optional `Date` column.

@@ -377,7 +377,8 @@ class AQIPredictor:
         st.write(f"**Dataset shape**: {self.df.shape}")
         st.write(f"**Cities in dataset**: {self.df['City'].nunique()}")
         st.write(f"**Columns**: {list(self.df.columns)}")
-        st.write(f"**Date range**: {self.df['Date'].min()} to {self.df['Date'].max()}")
+        if 'Date' in self.df.columns:
+            st.write(f"**Date range**: {self.df['Date'].min()} to {self.df['Date'].max()}")
         st.markdown("**Data Quality Check**:")
         missing_counts = self.df.isnull().sum()
         for col, count in missing_counts.items():
