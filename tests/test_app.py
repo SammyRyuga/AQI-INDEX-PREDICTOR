@@ -55,3 +55,30 @@ def test_uploaded_dataset_renders_graphs():
     app = run_app("Graphs")
     assert not app.exception
     assert len(app.get("imgs")) == 1
+
+
+def test_upload_ignores_pollutant_with_no_observations():
+    lines = CSV.splitlines()
+    csv = lines[0] + ",NO2\n" + "\n".join(line + "," for line in lines[1:])
+    app = run_app(csv=csv)
+    assert not app.exception
+    assert len(app.number_input) == 2
+    assert any("NO2" in item.value for item in app.warning)
+
+
+def test_upload_without_observed_pollutants_shows_error():
+    csv = "City,AQI,PM2.5\n" + "".join(f"Delhi,{i},\n" for i in range(50))
+    app = run_app(csv=csv)
+    assert not app.exception
+    assert any("No observed pollutant values" in item.value for item in app.error)
+    assert not app.number_input
+
+
+def test_pollutant_observations_require_a_valid_aqi():
+    csv = "City,AQI,PM2.5,PM10\n" + "".join(
+        f"Delhi,{i},,{i * 2}\n" for i in range(50)
+    ) + "Delhi,,10,20\n"
+    app = run_app(csv=csv)
+    assert not app.exception
+    assert len(app.number_input) == 1
+    assert "PM10" in app.number_input[0].label

@@ -112,6 +112,15 @@ class AQIPredictor:
         valid_indices = y.notna()
         X = X[valid_indices]
         y = y[valid_indices]
+
+        empty_features = [col for col in available_features if X[col].isna().all()]
+        available_features = [col for col in available_features if col not in empty_features]
+        if not available_features:
+            st.error("No observed pollutant values in rows with valid AQI")
+            return None, None, None
+        if empty_features:
+            st.warning(f"Ignoring pollutant columns without observations: {', '.join(empty_features)}")
+        X = X[available_features + ['City']]
         
         X_encoded = pd.get_dummies(X, columns=['City'], prefix='City', drop_first=True)
         pollutant_cols = [col for col in available_features if col in X_encoded.columns]
